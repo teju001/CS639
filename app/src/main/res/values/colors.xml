@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#DF2828</color>
     <color name="textback">#CAC383</color>
+    <color name="screenBackground2">#6B4CA3</color>
+    <color name="screenBackground">#887F30</color>
+    <color name="buttonBackground">#FF0000</color>
     <color name="pageback">#7E4F4B</color>
     <color name="pageback2">#CF3301</color>
 </resources>

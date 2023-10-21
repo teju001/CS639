@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import android.os.Bundle;
 
+import com.example.myfirstapp.databinding.ActivityMainBinding;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,23 +16,14 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.myfirstapp.databinding.ActivityMainBinding;
-import java.util.Random;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-
-    TextView txt;
-    Button btn;
-    Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,27 +37,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        txt = findViewById(R.id.textview_second);
-        btn = findViewById(R.id.random_button);
-        btn2 = findViewById(R.id.toast_button);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Random random = new Random();
-                int val = random.nextInt(1000);
-                txt.setText(Integer.toString(val));
-            }
-        });
-
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"hey toast",Toast.LENGTH_SHORT).show();
-            }
-        });
-
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
