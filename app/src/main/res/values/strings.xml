@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LitersToCups</string>
+    <string name="input_error">Please enter a valid number!</string>
+    <string name="name">Varun Teja Boorla</string>
+</resources>
