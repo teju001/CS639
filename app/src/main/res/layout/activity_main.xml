@@ -42,5 +42,29 @@
         android:textSize="18sp"
         android:layout_marginTop="20dp"
         android:text="Output will appear here" />
+    <!-- Add EditText for Age input -->
+    <EditText
+        android:id="@+id/ageInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter age"
+        android:inputType="number" />
+
+    <!-- Add CheckBox for Monday discount -->
+    <CheckBox
+        android:id="@+id/isMondayCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is it Monday?" />
+
+    <!-- Add EditText for Temperature input -->
+    <EditText
+        android:id="@+id/temperatureInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter temperature in Celsius"
+        android:inputType="numberDecimal" />
+
+    <!-- Rest of your layout -->
 
 </LinearLayout>

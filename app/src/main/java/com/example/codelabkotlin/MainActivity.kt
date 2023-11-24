@@ -1,6 +1,7 @@
 package com.example.codelabkotlin
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // UI Components
+        // UI components
         val notificationButton = findViewById<Button>(R.id.notificationButton)
         val ticketPriceButton = findViewById<Button>(R.id.ticketPriceButton)
         val temperatureButton = findViewById<Button>(R.id.temperatureButton)
@@ -20,12 +21,32 @@ class MainActivity : AppCompatActivity() {
         val profileButton = findViewById<Button>(R.id.profileButton)
         val outputTextView = findViewById<TextView>(R.id.outputTextView)
 
-        // Event Listeners
+        // Inputs for calculations
+        val ageInput = findViewById<EditText>(R.id.ageInput)
+        val isMondayCheckbox = findViewById<CheckBox>(R.id.isMondayCheckbox)
+        val temperatureInput = findViewById<EditText>(R.id.temperatureInput)
+
+        // Set click listeners for buttons
         notificationButton.setOnClickListener { outputTextView.text = getNotificationSummary(120) }
-        ticketPriceButton.setOnClickListener { outputTextView.text = getTicketPrice(28, true).toString() }
-        temperatureButton.setOnClickListener { outputTextView.text = convertTemperature(27.0, "Celsius", "Fahrenheit") }
+        ticketPriceButton.setOnClickListener {
+            val age = ageInput.text.toString().toIntOrNull()
+            val isMonday = isMondayCheckbox.isChecked
+            if (age != null) {
+                outputTextView.text = "The movie ticket price is $${getTicketPrice(age, isMonday)}"
+            } else {
+                outputTextView.text = "Please enter a valid age."
+            }
+        }
+        temperatureButton.setOnClickListener {
+            val temp = temperatureInput.text.toString().toDoubleOrNull()
+            if (temp != null) {
+                outputTextView.text = convertTemperature(temp, "Celsius", "Fahrenheit")
+            } else {
+                outputTextView.text = "Please enter a valid temperature."
+            }
+        }
         songButton.setOnClickListener { outputTextView.text = getSongDescription("Shape of You", "Ed Sheeran", 2017, 1500000) }
-        profileButton.setOnClickListener { outputTextView.text = getProfile("varun teja", 23, "watching anime", null) }
+        profileButton.setOnClickListener { outputTextView.text = getProfile("varun teja", 25, "anime", null) }
     }
 
     private fun getNotificationSummary(count: Int): String {
