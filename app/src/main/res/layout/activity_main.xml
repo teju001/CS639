@@ -1,0 +1,46 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/notificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Notifications Summary" />
+
+    <Button
+        android:id="@+id/ticketPriceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Ticket Price" />
+
+    <Button
+        android:id="@+id/temperatureButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert Temperature" />
+
+    <Button
+        android:id="@+id/songButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Song Description" />
+
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Display Profile" />
+
+    <TextView
+        android:id="@+id/outputTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:text="Output will appear here" />
+
+</LinearLayout>
