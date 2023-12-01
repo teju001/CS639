@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Varun app</string>
+    <string name="username">Username</string>
+    <string name="welcome_dagger">Welcome to varun app!</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="registration_dagger">Register to varun app!</string>
+    <string name="register">Register</string>
+    <string name="next">Next</string>
+    <string name="login_error">Error logging you in. Try again</string>
+    <string name="registration_error">Error happened during registration. Try again</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="tcs_text">collects and stores user data </string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="refresh_notifications">Refresh Notifications</string>
+    <string name="unregister">Unregister</string>
+    <string name="placeholder">Placeholder</string>
+</resources>
